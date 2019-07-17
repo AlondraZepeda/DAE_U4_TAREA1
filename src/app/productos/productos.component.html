@@ -14,9 +14,9 @@
     <p *ngIf = "prod.rango"> rango:{{prod.rango}}
         <span class = "float-right"><i class="text-warning fa fa-star"></i></span>
     </p>
+        <img [src] = "prod.enlace" style="max-width: 250px; max-height: 250px">
     <div style = "text-align:center">
         <star-rating value = "5" checkedcolor = "orange" uncheckedcolor = "black" size = "35px" readonly = "flase" (rate) = "onRate($event)"></star-rating>
     </div>
-  
 </div>
 
