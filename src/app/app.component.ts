@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Actividad02';
+  constructor() { }
+ 
+  ngOnInit() { }
+ 
+  onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
+    alert(`Old Value:${$event.oldValue}, 
+      New Value: ${$event.newValue}, 
+      Checked Color: ${$event.starRating.checkedcolor}, 
+      Unchecked Color: ${$event.starRating.uncheckedcolor}`);
+  }
 }
+
+
+ 
+
+  

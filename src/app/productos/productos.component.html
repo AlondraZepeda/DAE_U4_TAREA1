@@ -1,0 +1,22 @@
+<h2>Productos</h2>
+
+<div *ngFor="let prod of productos">
+    <h3>
+    <a [title]="'Detalles del producto'+prod.name"
+        [routerLink]="['/productos']">
+        {{prod.name}} 
+      
+    </a>
+    </h3>
+
+    <p *ngIf = "prod.description">Descripción:{{prod.description}}</p>
+    <p *ngIf = "prod.id"> id:{{prod.id}}</p>
+    <p *ngIf = "prod.rango"> rango:{{prod.rango}}
+        <span class = "float-right"><i class="text-warning fa fa-star"></i></span>
+    </p>
+    <div style = "text-align:center">
+        <star-rating value = "5" checkedcolor = "orange" uncheckedcolor = "black" size = "35px" readonly = "flase" (rate) = "onRate($event)"></star-rating>
+    </div>
+  
+</div>
+
